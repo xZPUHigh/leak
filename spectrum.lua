@@ -1,12 +1,12 @@
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua", true))()
-localocal notif1 = Notification.new("message", "Project Spectrum", "Script Loading...")
-local notif2 = Notification.new("message", "Project Spectrum", "Checking Whilelist...")
+local notif1 = Notification.new("message", "Quarterly Hub Premium Script Pc", "Script Loading..")
+local notif2 = Notification.new("message", "Quarterly Hub Premium Script Pc", "Check Whilelist.")
 wait(1)
-local notif3 = Notification.new("message", "Project Spectrum", "Checking Game...")
+local notif3 = Notification.new("message", "Quarterly Hub Premium Script Pc", "Check Game...")
 wait(2)
-local notif4 = Notification.new("success", "Project Spectrum", "Script Loading Success ✅")
+local notif4 = Notification.new("success", "Quarterly Hub Premium Script Pc", "Script Loading Success ✅")
 wait(0.4)
-local notif5 = Notification.new("success", "Project Spectrum", "Thx For Using Spectrum ✅")
+local notif5 = Notification.new("success", "Quarterly Hub Premium Script Pc", "Thank For Buying Quarterly Hub ✅")
 wait(0.5)
 notif1:delete()
 wait(0.1)
@@ -583,7 +583,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
     library = {}
     
     local QuarterlyHub = Instance.new("ScreenGui")
-    QuarterlyHub.Name = "Project Spectrum"
+    QuarterlyHub.Name = "Quarterly Hub"
     QuarterlyHub.Parent = game.CoreGui:WaitForChild("RobloxGui"):WaitForChild("Modules")
     
     function library:Createlibrary()
@@ -641,7 +641,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
         Name.Position = UDim2.new(0.112333275, 0, 0.5, 0)
         Name.Size = UDim2.new(0, 91, 0, 25)
         Name.Font = Enum.Font.SourceSansBold
-        Name.Text = "Project"
+        Name.Text = "Quarterly"
         Name.TextColor3 = Color3.fromRGB(255, 255, 255)
         Name.TextScaled = true
         Name.TextSize = 21.000
@@ -649,7 +649,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
         Name.TextWrapped = true
         Name.TextXAlignment = Enum.TextXAlignment.Left
     
-        Hub.Name = "Spectrum"
+        Hub.Name = "Hub"
         Hub.Parent = Top
         Hub.AnchorPoint = Vector2.new(0, 0.5)
         Hub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1465,7 +1465,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
     
         UICorner_7.Parent = MainTop
     
-        Hub_2.Name = "Spectrum"
+        Hub_2.Name = "Hub"
         Hub_2.Parent = MainTop
         Hub_2.AnchorPoint = Vector2.new(0.5, 0.5)
         Hub_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1475,7 +1475,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
         Hub_2.Position = UDim2.new(0.493928522, 0, 0.21421659, 0)
         Hub_2.Size = UDim2.new(0, 159, 0, 35)
         Hub_2.Font = Enum.Font.SourceSansBold
-        Hub_2.Text = "Spectrum"
+        Hub_2.Text = "Hub"
         Hub_2.TextColor3 = Color3.fromRGB(0, 166, 255)
         Hub_2.TextScaled = true
         Hub_2.TextSize = 21.000
@@ -1493,7 +1493,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
         Name_2.Position = UDim2.new(0.128928587, 0, 0.21421659, 0)
         Name_2.Size = UDim2.new(0, 166, 0, 35)
         Name_2.Font = Enum.Font.SourceSansBold
-        Name_2.Text = "Project"
+        Name_2.Text = "Quarterly"
         Name_2.TextColor3 = Color3.fromRGB(255, 255, 255)
         Name_2.TextScaled = true
         Name_2.TextSize = 21.000
@@ -1510,7 +1510,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
         LogoBackground.BorderSizePixel = 0
         LogoBackground.Position = UDim2.new(0.526309848, 20, 0.49480328, 0)
         LogoBackground.Size = UDim2.new(0, 235, 0, 235)
-        LogoBackground.Image = "rbxassetid://15568727833"
+        LogoBackground.Image = "rbxassetid://14572696504"
         LogoBackground.ImageColor3 = Color3.fromRGB(0, 0, 30)
     
         _Label.Name = "_Label"
@@ -1532,7 +1532,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
         Logo.BorderSizePixel = 0
         Logo.Position = UDim2.new(0.567381263, 20, 0.49751696, 0)
         Logo.Size = UDim2.new(0, 188, 0, 194)
-        Logo.Image = "rbxassetid://15568727833"
+        Logo.Image = "rbxassetid://14572696504"
         Logo.ImageColor3 = Color3.fromRGB(154, 154, 154)
     
         Name_3.Name = "Name"
@@ -1545,7 +1545,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
         Name_3.Position = UDim2.new(0.128928587, 0, 0.416981578, 0)
         Name_3.Size = UDim2.new(0, 166, 0, 19)
         Name_3.Font = Enum.Font.SourceSansBold
-        Name_3.Text = "Project Spectrum 4.0 x ZPU"
+        Name_3.Text = "Premium Script PC"
         Name_3.TextColor3 = Color3.fromRGB(255, 255, 255)
         Name_3.TextScaled = true
         Name_3.TextSize = 21.000
@@ -1559,7 +1559,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
         TextButton.Position = UDim2.new(0.0982142836, 0, 0.54838711, 0)
         TextButton.Size = UDim2.new(0, 208, 0, 31)
         TextButton.Font = Enum.Font.SourceSansBold
-        TextButton.Text = "Show Player Stats : On"
+        TextButton.Text = "Player Ui Stast : On"
         TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
         TextButton.TextSize = 19.000
         TextButton.TextWrapped = true
@@ -3434,16 +3434,16 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
     
     function LoadSettings()
         if readfile and writefile and isfile and isfolder then
-            if not isfolder("Project Spectrum") then
-                makefolder("Project Spectrum")
+            if not isfolder("Quarterly Hub Premium") then
+                makefolder("Quarterly Hub Premium")
             end
-            if not isfolder("Project Spectrum/Blox Fruits/") then
-                makefolder("Project Spectrum/Blox Fruits/")
+            if not isfolder("Quarterly Hub Premium/Blox Fruits/") then
+                makefolder("Quarterly Hub Premium/Blox Fruits/")
             end
-            if not isfile("Project Spectrum/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json") then
-                writefile("Project Spectrum/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json", game:GetService("HttpService"):JSONEncode(_G.Settings))
+            if not isfile("Quarterly Hub Premium/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json") then
+                writefile("Quarterly Hub Premium/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json", game:GetService("HttpService"):JSONEncode(_G.Settings))
             else
-                local Decode = game:GetService("HttpService"):JSONDecode(readfile("Project Spectrum/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json"))
+                local Decode = game:GetService("HttpService"):JSONDecode(readfile("Quarterly Hub Premium/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json"))
                 for i,v in pairs(Decode) do
                     _G.Settings[i] = v
                 end
@@ -3455,15 +3455,15 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
     
     function SaveSettings()
         if readfile and writefile and isfile and isfolder then
-            if not isfile("Project Spectrum/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json") then
+            if not isfile("Quarterly Hub Premium/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json") then
                 LoadSettings()
             else
-                local Decode = game:GetService("HttpService"):JSONDecode(readfile("Project Spectrum/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json"))
+                local Decode = game:GetService("HttpService"):JSONDecode(readfile("Quarterly Hub Premium/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json"))
                 local Array = {}
                 for i,v in pairs(_G.Settings) do
                     Array[i] = v
                 end
-                writefile("Project Spectrum/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json", game:GetService("HttpService"):JSONEncode(Array))
+                writefile("Quarterly Hub Premium/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json", game:GetService("HttpService"):JSONEncode(Array))
             end
         else
             return warn("Status : Undetected Executor")
@@ -13251,7 +13251,7 @@ local KaiSection = TeleportTab:CreateSection({
     Side = "Left"
 })
 
-logohee = 15568727833
+logohee = 14300572370
 
 KaiSection:AddTextbox({
     Name = "Logo Shop",
@@ -13296,7 +13296,7 @@ KaiSection:AddButton({
             
             local logoImage = Instance.new("ImageLabel")
             logoImage.Parent = logoGui
-            logoImage.Name = "Project Spectrum"
+            logoImage.Name = "Quarterly"
             logoImage.Position = UDim2.new(0, 1769, 0, 820)
             logoImage.Size = UDim2.new(0, 150, 0, 150)
             logoImage.Image = "http://www.roblox.com/asset/?id=" ..logohee
@@ -13322,7 +13322,7 @@ KaiSection:AddButton({
         local Awake = game.Players.LocalPlayer.PlayerGui.Main.AwakeningToggler
         Awake.Visible = true
         Awake.Position = UDim2.new(0.5, 10, 0, 870)
-        Awake.Info.TextLabel.Text = "Project Spectrum Kaitun Picture"
+        Awake.Info.TextLabel.Text = "Quarterly Hub Kaitun Picture"
 
         if not game:GetService("CoreGui"):FindFirstChild("CheckFruit") then
             local CheckFruit = Instance.new("ScreenGui")
