@@ -4474,8 +4474,10 @@ spawn(function()
         pcall(function()
             if BringMobs then
                 CheckQuest()
-                for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                    if BringMobs and StartMagnet and v.Name == Mon and (Mon == "Factory Staff" or Mon == "Monkey" or Mon == "Dragon Crew Warrior" or Mon == "Dragon Crew Archer") and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 and (v.HumanoidRootPart.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 220 then
+                for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+                    if not string.find(v.Name,"Boss") and v.Name == MonFarm and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 300 then
+                    if InMyNetWork(v.HumanoidRootPart) then
+                      if InMyNetWork(v.HumanoidRootPart) then
                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                         v.HumanoidRootPart.CFrame = PosMon
                         v.Humanoid:ChangeState(14)
