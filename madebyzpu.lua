@@ -70,6 +70,12 @@ local function Noclip()
     end
 end
 
+_G.HoHoLoaded = true
+notify = loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Notification.lua"))()
+notify.New("Project Spectrum 8.0", 60)
+notify.New("by xZPUHigh & Special Edition", 60)
+
+wait(.1)
 print("Project Spectrum...")
 wait(0)
     print("Founder/ ZPU {xZPUHigh}")
@@ -85,26 +91,26 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 --Window
 local Window = Fluent:CreateWindow({
-    Title = "Spectrum x ZPU",
-    SubTitle = "Project 8.0",
+    Title = "Project Spectrum 8.0",
+    SubTitle = "by xZPUHigh & Special Edition",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
     Theme = "Darker",
-    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+    MinimizeKey = Enum.KeyCode.End -- Used when theres no MinimizeKeybind
 })
 
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 
 local Tabs = {
-    Main = Window:AddTab({ Title = "Main", Icon = "home" }),
-    Setting = Window:AddTab({ Title = "Setting", Icon = "settings" }),
+    Main = Window:AddTab({ Title = "General", Icon = "home" }),
+    Setting = Window:AddTab({ Title = "Settings", Icon = "settings" }),
     Stats = Window:AddTab({ Title = "Stats", Icon = "plus-circle" }),
-    Player = Window:AddTab({ Title = "Player", Icon = "baby" }),
-    Teleport = Window:AddTab({ Title = "Teleport", Icon = "palmtree" }),
+    Player = Window:AddTab({ Title = "Combat", Icon = "locate-fixed" }),
+    Teleport = Window:AddTab({ Title = "Teleport", Icon = "map-pin" }),
     Fruit = Window:AddTab({ Title = "Devil Fruit", Icon = "apple" }),
     Raid = Window:AddTab({ Title = "Dungeon", Icon = "swords" }),
-    Race = Window:AddTab({ Title = "Race V4", Icon = "chevrons-right" }),
+    Race = Window:AddTab({ Title = "Race", Icon = "chevrons-right" }),
     Shop = Window:AddTab({ Title = "Shop", Icon = "shopping-cart" }),
 	Misc = Window:AddTab({ Title = "Misc", Icon = "list-plus" }),
 }
@@ -2382,84 +2388,6 @@ function BTP(p)
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
----Close gui
-local ScreenGui = Instance.new("ScreenGui")
-local ImageButton = Instance.new("ImageButton")
-local UICorner = Instance.new("UICorner")
-local UIGradient = Instance.new("UIGradient")
-local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-ImageButton.Parent = ScreenGui
-ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
-ImageButton.Size = UDim2.new(0.0627121851, 0, 0.107579626, 0)
-ImageButton.Image = "rbxassetid://15568727849"
-
-UICorner.CornerRadius = UDim.new(0, 30)
-UICorner.Parent = ImageButton
-
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(244, 0, 0)), ColorSequenceKeypoint.new(0.32, Color3.fromRGB(146, 255, 251)), ColorSequenceKeypoint.new(0.65, Color3.fromRGB(180, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(96, 255, 231))}
-UIGradient.Parent = ImageButton
-
-UIAspectRatioConstraint.Parent = ImageButton
-UIAspectRatioConstraint.AspectRatio = 0.988
-
-
-local function HCEGY_fake_script()
-	local script = Instance.new('LocalScript', UIGradient)
-
-	local TweenService = game:GetService("TweenService")
-	local tweeninfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-	local tween = TweenService:Create(script.Parent, tweeninfo, {Rotation = 360})
-	tween:Play()
-end
-coroutine.wrap(HCEGY_fake_script)()
-local function YTZCAJC_fake_script()
-	local script = Instance.new('LocalScript', ImageButton)
-
-	local UIS = game:GetService('UserInputService')
-	local frame = script.Parent
-	local dragToggle = nil
-	local dragSpeed = 0.25
-	local dragStart = nil
-	local startPos = nil
-	
-	local function updateInput(input)
-		local delta = input.Position - dragStart
-		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
-	end
-	
-	frame.InputBegan:Connect(function(input)
-		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-			dragToggle = true
-			dragStart = input.Position
-			startPos = frame.Position
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragToggle = false
-				end
-			end)
-		end
-	end)
-	
-	UIS.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			if dragToggle then
-				updateInput(input)
-			end
-		end
-	end)
-	script.Parent.MouseButton1Click:Connect(function()
-		game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.End,false,game)
-	end)
-end
-coroutine.wrap(YTZCAJC_fake_script)()
 --------------------------------------------------------------------------------------------------------------------------------------------
 -- Hehe
 local posX = 0
@@ -2468,12 +2396,12 @@ local posZ = 0
 --------------------------------------------------------------------------------------------------------------------------------------------
 --Create Tabs
     Tabs.Main:AddParagraph({
-        Title = "Farming",
-        Content = "Auto Farm"
+        Title = "Farming Sections",
+        Content = "Auto Farm Level will auto farm level for you, this script so very fast No.1"
     })
 
     local DropdownSelectWeapon = Tabs.Main:AddDropdown("DropdownSelectWeapon", {
-        Title = "Dropdown",
+        Title = "Select Weapons",
         Values = {'Melee','Sword','Blox Fruit'},
         Multi = false,
         Default = 1,
@@ -2654,7 +2582,7 @@ local posZ = 0
 
 
     Tabs.Main:AddButton({
-        Title = "Fps Booster",
+        Title = "Fps Boosters",
         Description = "Boost your fps",
         Callback = function()
             FPSBooster()
@@ -2706,12 +2634,12 @@ local posZ = 0
 --------------------------------------------------------------------------------------------------------------------------------------------
 --Mastery
     Tabs.Main:AddParagraph({
-        Title = "Mastery Farm",
-        Content = "Auto farm your mastery"
+        Title = "Auto Farm Mastery",
+        Content = "Auto farm your mastery very fast!"
     })
 
     local DropdownMastery = Tabs.Main:AddDropdown("DropdownMastery", {
-        Title = "Farm Mode",
+        Title = "Mode Sections",
         Values = {"Level","Near Mobs",},
         Multi = false,
         Default = 1,
@@ -2723,7 +2651,7 @@ local posZ = 0
         TypeMastery = Value
     end)
 
-    local ToggleMasteryFruit = Tabs.Main:AddToggle("ToggleMasteryFruit", {Title = "Auto BF Mastery", Default = false })
+    local ToggleMasteryFruit = Tabs.Main:AddToggle("ToggleMasteryFruit", {Title = "Auto Fruit Mastery", Default = false })
     ToggleMasteryFruit:OnChanged(function(Value)
         AutoFarmMasDevilFruit = Value
     end)
@@ -3251,7 +3179,7 @@ end)
 
 Tabs.Main:AddParagraph({
     Title = "Misc Farm",
-    Content = "Bone & Cake Prince & "
+    Content = "Bone & Cake Prince & Etc"
 })
 
 local ToggleBone = Tabs.Main:AddToggle("ToggleBone", {Title = "Auto Farm Bone", Default = false })
@@ -3458,7 +3386,7 @@ spawn(function()
 
     Tabs.Main:AddParagraph({
         Title = "Boss Farm",
-        Content = ""
+        Content = "Auto farm all boss you select!"
     })
 
 
@@ -3474,7 +3402,7 @@ spawn(function()
 
 
     local DropdownBoss = Tabs.Main:AddDropdown("DropdownBoss", {
-        Title = "Dropdown",
+        Title = "Sections",
         Values = tableBoss,
         Multi = false,
         Default = 1,
@@ -3566,7 +3494,7 @@ spawn(function()
 
     Tabs.Main:AddParagraph({
         Title = "Material",
-        Content = "Auto farm material"
+        Content = "Auto farm material very fast!"
     })
 
     if First_Sea then
@@ -3582,7 +3510,7 @@ spawn(function()
         end
 
     local DropdownMaterial = Tabs.Main:AddDropdown("DropdownMaterial", {
-        Title = "Dropdown",
+        Title = "Sections",
         Values = MaterialList,
         Multi = false,
         Default = 1,
@@ -3652,7 +3580,7 @@ if Third_Sea then
 
       Tabs.Main:AddParagraph({
         Title = "Rough Sea",
-        Content = "Auto rough sea"
+        Content = "Auto all in rough sea"
     })
 
 
@@ -3838,7 +3766,7 @@ if Third_Sea then
 
      Tabs.Main:AddParagraph({
         Title = "Elite Hunter",
-        Content = "Auto find and kill boss elite"
+        Content = "Auto find and kill boss elite hunter"
     })
 
 
@@ -3915,7 +3843,7 @@ if Third_Sea then
 
        Tabs.Main:AddParagraph({
         Title = "Sea Beast",
-        Content = "Auto Kill Sea Beast"
+        Content = "Auto Kill Sea Beast and sea event"
     })
 
 
@@ -4072,7 +4000,7 @@ ToggleAutoW:OnChanged(function(Value)
 
  Tabs.Main:AddParagraph({
     Title = "Mirage Island",
-    Content = "Auto Summon Mystic Island"
+    Content = "Auto find and Summon Mystic Island"
 })
 
 
@@ -4162,7 +4090,7 @@ end
 
      Tabs.Main:AddParagraph({
         Title = "Items",
-        Content = "Auto get items"
+        Content = "Auto get items you select!"
     })
 
 
@@ -4434,8 +4362,8 @@ end
 --------------------------------------------------------------------------------------------------------------------------------------------
 --Setting
     Tabs.Setting:AddParagraph({
-        Title = "Setting",
-        Content = "Setting Farm"
+        Title = "Settings",
+        Content = "Settings Farm And more"
     })
 
     local ToggleFastAttack = Tabs.Setting:AddToggle("ToggleFastAttack", {Title = "Fast Attack", Default = true })
@@ -4536,52 +4464,44 @@ CamShake:Stop()
 
 
 
-    local ToggleBringMob = Tabs.Setting:AddToggle("ToggleBringMob", {Title = "Bring Mob", Default = true })
-    ToggleBringMob:OnChanged(function(Value)
-        BringMobs = Value
-    end)
-    Options.ToggleBringMob:SetValue(true)
-	task.spawn(function()
-        while task.wait() do
-        if BringMobs then
+local ToggleBringMob = Tabs.Setting:AddToggle("ToggleBringMob", {Title = "Bring Mob", Default = true })
+ToggleBringMob:OnChanged(function(Value)
+    BringMobs = Value
+end)
+Options.ToggleBringMob:SetValue(true)
+spawn(function()
+    while task.wait() do
         pcall(function()
-            for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                if _G.Auto_Farm_Level and BringMobFarm and v.Name == Mon and (v.HumanoidRootPart.Position - PosMon.Position).magnitude <= 225 then
-                    v.HumanoidRootPart.CFrame = PosMon
-                    v.HumanoidRootPart.CanCollide = false
-                    v.HumanoidRootPart.Size = Vector3.new(60,60,60)
-                    if v.Humanoid:FindFirstChild("Animator") then
-                        v.Humanoid.Animator:Destroy()
+            if BringMobs then
+                CheckQuest()
+                for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                    if BringMobs and StartMagnet and v.Name == Mon and (Mon == "Factory Staff" or Mon == "Monkey" or Mon == "Dragon Crew Warrior" or Mon == "Dragon Crew Archer") and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 and (v.HumanoidRootPart.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 220 then
+                        v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                        v.HumanoidRootPart.CFrame = PosMon
+                        v.Humanoid:ChangeState(14)
+                        v.HumanoidRootPart.CanCollide = false
+                        v.Head.CanCollide = false
+                        if v.Humanoid:FindFirstChild("Animator") then
+                            v.Humanoid.Animator:Destroy()
+                        end
+                        sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
+                    elseif _G.AutoFarm and StartMagnet and v.Name == Mon and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 and (v.HumanoidRootPart.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.BringMode then
+                        v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                        v.HumanoidRootPart.CFrame = PosMon
+                        v.Humanoid:ChangeState(14)
+                        v.HumanoidRootPart.CanCollide = false
+                        v.Head.CanCollide = false
+                        if v.Humanoid:FindFirstChild("Animator") then
+                            v.Humanoid.Animator:Destroy()
+                        end
+                        sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
                     end
-                    sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius",  math.huge)
+
                 end
             end
-        end
-    end)
-end)
-end)
-      
-      task.spawn(function()
-        while true do wait()
-        if setscriptable then
-        setscriptable(game.Players.LocalPlayer,"SimulationRadius",true)
-        end
-        if sethiddenproperty then
-        sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)
-        end
-        end
         end)
-      
-      function InMyNetWork(object)
-      if isnetworkowner then
-      return isnetworkowner(object)
-      else
-        if (object.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 350 then
-      return true
-      end
-      return false
-      end
-      end
+    end
+end)
 
 
 
@@ -4613,8 +4533,8 @@ ToggleRemove:OnChanged(function(Value)
 
 
 Tabs.Setting:AddParagraph({
-    Title = "Setting Skill",
-    Content = "Skill use for farm mastery"
+    Title = "Settings Skill",
+    Content = "Skill use for farm mastery fruit & gun"
 })
 
 local ToggleZ = Tabs.Setting:AddToggle("ToggleZ", {Title = "Skill Z", Default = true })
@@ -4771,7 +4691,7 @@ for i,v in pairs(game:GetService("Players"):GetChildren()) do
 end
 
 local SelectedPly = Tabs.Player:AddDropdown("SelectedPly", {
-    Title = "Dropdown",
+    Title = "Sections",
     Values = Playerslist,
     Multi = false,
     Default = 1,
@@ -4784,7 +4704,7 @@ end)
 
     
 Tabs.Player:AddButton({
-    Title = "Refresh Dropdown",
+    Title = "Refresh Sections",
     Description = "Refresh player list",
     Callback = function()
         Playerslist = {}
@@ -4826,7 +4746,7 @@ Options.ToggleQuanSat:SetValue(false)
 --Teleport
 Tabs.Teleport:AddParagraph({
     Title = "World",
-    Content = "Sea1 & Sea2 & Sea3"
+    Content = "Sea 1 & Sea 2 & Sea 3"
 })
 
 Tabs.Teleport:AddButton({
@@ -4925,7 +4845,7 @@ elseif Third_Sea then
     end
 
 local DropdownIsland = Tabs.Teleport:AddDropdown("DropdownIsland",{
-    Title = "Dropdown",
+    Title = "Sections",
     Values = IslandList,
     Multi = false,
     Default = 1,
@@ -5065,7 +4985,7 @@ end
 _G.SelectFruit = ""
 
 local DropdownFruit = Tabs.Fruit:AddDropdown("DropdownFruit", {
-    Title = "Dropdown",
+    Title = "Sections",
     Values = Table_DevilFruitSniper,
     Multi = false,
     Default = 1,
@@ -5253,7 +5173,7 @@ end)
 
 Tabs.Fruit:AddParagraph({
     Title = "Esp",
-    Content = ""
+    Content = "you can see thing you want see"
 })
 
 
@@ -5333,7 +5253,7 @@ end)
 local Chips = {"Flame","Ice","Quake","Light","Dark","Spider","Rumble","Magma","Buddha","Sand","Phoenix","Dough"}
 
 local DropdownRaid = Tabs.Raid:AddDropdown("DropdownRaid", {
-    Title = "Dropdown",
+    Title = "Sections",
     Values = Chips,
     Multi = false,
     Default = 1,
@@ -5635,7 +5555,7 @@ end
 
 Tabs.Raid:AddParagraph({
     Title = "Raid Law",
-    Content = ""
+    Content = "auto farm raid law"
 })
 
 
@@ -5724,7 +5644,7 @@ Tabs.Race:AddButton({
 
 Tabs.Race:AddParagraph({
     Title = "Auto Race",
-    Content = ""
+    Content = "auto doing all about race v4"
 })
 
 
@@ -5891,7 +5811,7 @@ end)
 
 Tabs.Race:AddParagraph({
     Title = "Misc Race",
-    Content = "Auto Farm Acient Quest"
+    Content = "Auto Farm Acient One Quest"
 })
 
 
@@ -6040,8 +5960,8 @@ Tabs.Shop:AddButton({
 
 
 Tabs.Shop:AddParagraph({
-	Title = "Fighting Style",
-	Content = ""
+	Title = "Fighting Styles",
+	Content = "All Melee"
 })
 
 
@@ -6130,7 +6050,7 @@ Tabs.Shop:AddButton({
 
 Tabs.Shop:AddParagraph({
 	Title = "Items",
-	Content = ""
+	Content = "buy items"
 })
 
 Tabs.Shop:AddButton({
@@ -6331,7 +6251,7 @@ Tabs.Misc:AddButton({
 
 Tabs.Misc:AddParagraph({
 	Title = "Open Ui",
-	Content = ""
+	Content = "open nigga ui"
 
 })
 Tabs.Misc:AddButton({
